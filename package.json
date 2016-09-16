@@ -1,0 +1,25 @@
+{
+  "author": {
+	"name": "Scott Jones",
+	"email": "sjones243@gmail.com"
+  },
+  "name": "NPM-Native-JS-Class-Manager",
+  "version": "1.0.0",
+  "description": "A simple NPM module that allows for easy class management",
+  "private": true,
+  "main": "src/index.js",
+  "devDependencies": {
+	"chai": "^3.5.0",
+	"eslint": "^3.0.1",
+	"istanbul": "^0.4.4",
+	"jsdoc": "^3.4.0",
+	"mochify": "^2.18.0",
+	"mochify-istanbul": "^2.4.1",
+	"phantomjs": "^2.1.7"
+  },
+  "dependencies": {},
+  "scripts": {
+	  "test": "npm run lint && mochify --plugin [ mochify-istanbul --exclude '**/+(test|templates)/**/*' --report json --report lcov --dir ./reports/cov ] -R spec --phantomjs ./node_modules/.bin/phantomjs",
+	  "lint": "eslint --color src test --ext .js*"
+  }
+}
